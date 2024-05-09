@@ -1,0 +1,26 @@
+CREATE FOLDER IN ANY DRIVE(AKASH)
+START A PROJECT (DJANGO-ADMIN STARTPROJECT (PROJECT NAME))
+TO CREATE A APP UNDER THE PROJECT (DJANGO-ADMIN STARTAPP(APP NAME))
+HOW TO RUN AND CHECK DJANGO (PY MANAGE.PY RUNSERVER)\
+open vscode open project(project name)
+open setting.py of (projectname) and the (appname)under installed_app
+open urls.py of project (projrct name)
+add path ('',include('appname.urls'))
+create a new file urls.py inside the app
+add below code 
+from django.urls import path
+from . import views
+
+urlspatterns=[
+    path('funcation name which is create in views',views.index,name="index")  {same like views
+]
+
+create template folder inside the app, create new file index.html
+create folder static in app, create style.css file
+go to views.py
+from .models import Members
+
+def index(request):
+    mem=Members.objects.all()
+    return render(request,'index.html',{'mem':'mem'})
+ 

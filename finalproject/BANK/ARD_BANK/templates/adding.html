@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cunsumer Document</title>
+</head>
+<body>
+    <div class="container1">
+        <h1>Add Cunsumer</h1>
+        <form action="{%url 'ADD'%}" method="post">
+            {% csrf_token %}
+            <label for="">name</label><br><br>
+            <input type="text" name="Name"><br><br>
+            <label for="">phone</label><br><br>
+            <input type="mobile" name="Phone"><br><br>
+            <label for="">account_no</label><br><br>
+            <input type="int" name="Account_no"><br><br>
+            <label for="">dob</label><br><br>
+            <input type="date" name="DOB"><br><br>
+            <label for="">addr</label><br><br>
+            <input type="text" name="ADDR"><br><br>
+            <label for="">email</label><br><br>
+            <input type="email" name="Email"><br><br>           
+            <button type="submit" id="new">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>

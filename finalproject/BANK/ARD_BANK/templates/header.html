@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Home Page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom CSS -->
+    <style>
+        /* Add custom styles for text color */
+        h1,h2,p {
+            color: rgb(27, 27, 27);
+        }
+    </style>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <h2>BANK OF ARD</h2>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="{%url 'Home' %}">Home</a>      
+            </li>
+            <div class="dropdown">
+                <button type="button" class="btn btn- dropdown-toggle" data-toggle="dropdown">Loan</button>
+                <div class="dropdown-menu">
+                    <a href="{%url 'personal' %}" class="dropdown-item">Personal Loan</a>
+                    <a href="{%url 'car' %}" class="dropdown-item">Car Loan</a>
+                    <a href="{%url 'gold' %}" class="dropdown-item">Gold Loan</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button type="button" class="btn btn- dropdown-toggle" data-toggle="dropdown">Card</button>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item">Debit Card</a>
+                    <a href="#" class="dropdown-item">Credit Card</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button type="button" class="btn btn- dropdown-toggle" data-toggle="dropdown">Account</button>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item">Saving Account</a>
+                    <a href="#" class="dropdown-item">Current Account</a>
+                </div>
+            </div>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{%url 'Customer' %}">Customer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Login</a></li>
+        </ul>
+    </div>
+</nav>
+
+</body>

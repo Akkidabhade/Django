@@ -1,0 +1,73 @@
+install virtual enviroment
+pip install virtualenv 
+
+to make folder
+mkdir myproject
+
+to move in folder
+cd myproject
+
+to create virtual enviroment venv
+virtualenv venv
+
+to activatate virtual enviroment
+venv\scripts\activatate
+
+to install django
+pip install django
+
+to create project 
+django-admin startproject firstproject
+
+to run project
+python manage.py runserver
+
+to create app inside project 
+cd firstproject
+django-admin startapp itvedant
+
+--	create function/class in view.py of app
+		from django.http import HttpResponse
+
+			def functionname(request):
+				return HttpResponse(" message ")
+-- url mapping of app
+-- create an new urls.py in app
+		from django.urls import path
+		from . import views
+
+urlpatterns=[path('path/', views.____,name='')]
+
+-- include url in project
+			path('', include('appname.urls'))
+
+
+To create template under app
+1. create an folder called as templates
+2. create an html file under template folder
+3. create an function for html file to load under views.py
+4. change urls.py of app
+5. change setting.py of project add appname in it
+6. migrate ---- py manage.py migrate
+
+To create model, add data
+1. go to model.py of app
+2. create class with needed data 
+3. go to terminal -------- py manage.py makemigrations appname
+(later then see all changes in folder migrations)
+4. go to terminal -------- py manage.py migrate
+5. view sql command executed from migrations
+py manage.py sqlmigrate appname 0001 
+6. to add records in table
+- open shell ----- py manage.py shell
+-- from appname.models import classname/tablename)
+eg : from rcb.models import TeamDetails
+-- add an record to table 
+objectname= classname(colname='values',,,,,,)
+eg: p2=TeamDetails(playername='def',playersurname='ccxyz',playerage='23',playerspeciality='bowler')
+objectname= .save()
+eg: p2.save()
+-- to see table got an record
+classname.objects.all().values()
+eg:  TeamDetails.objects.all().values()
+

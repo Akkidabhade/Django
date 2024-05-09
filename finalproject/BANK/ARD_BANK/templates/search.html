@@ -1,0 +1,23 @@
+<header>
+    </header>
+<body>
+    {% if results %}
+        <h2>Search Results</h2>
+        <ul>
+        {% for customers in results %}
+            <h1 class="card-title">Name: {{ customers.name }}</h1>
+            <h1 class="card-title">Phone: {{ customers.phone }}</h1>
+            <h1 class="card-title">Phone: {{ customers.account_no }}</h1>
+            <h1 class="card-title">DOB: {{ customers.dob }}</h1>
+            <h1 class="card-title">ADDR: {{ customers.addr }}</h1>
+            <h1 class="card-title">Email: {{ customers.email }}</h1>
+            <h1 class="card-title">DOB: {{ customers.amount }}</h1>
+            <h1 class="card-title">ADDR: {{ customers.gender }}</h1>
+            <h1 class="card-title">PERCENTAGE: {{ customers.document }}</h1>
+            <img src="{{customers.image.url}}" class="card-img-top" alt="Profile Image" width="1500" height="1000">
+        {% endfor  %}
+        </ul>
+    {% else %}
+        <h1>No data found.</h1>
+    {% endif %}
+</body>    
