@@ -1,0 +1,18 @@
+<body>
+{% if results %}
+    <h2>Search Results</h2>
+    <ul>
+    {% for student in results %}
+        <h1 class="card-title">Name: {{ student.name }}</h1>
+        <h1 class="card-subtitle mb-2 text-muted">Education: {{ student.educ }}</h1>
+        <h1 class="card-title">Email: {{ student.email }}</h1>
+        <h1 class="card-title">Phone: {{ student.phone }}</h1>
+        <h1 class="card-title">DOB: {{ student.dob }}</h1>
+        <h1 class="card-title">ADDR: {{ student.addr }}</h1>
+        <h1 class="card-title">PERCENTAGE: {{ student.percentage }}</h1>
+        <img src="{{student.image.url}}" class="card-img-top" alt="Profile Image" width="1500" height="1000">
+    {% endfor  %}
+    </ul>
+{% else %}
+    <p>No data found.</p>
+{% endif %}

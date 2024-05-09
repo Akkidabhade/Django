@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETAILS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Name: {{obj.name}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Education: {{obj.educ}}</h6>
+                <p class="card-text">Email: {{obj.email}}</p>
+                <p class="card-text">Phone: {{obj.phone}}</p>
+                <p class="card-text">DOB: {{obj.dob}}</p>
+                <p class="card-text">ADDR: {{obj.addr}}</p>
+                <p class="card-text">PERCENTAGE: {{obj.percentage}}</p>
+
+                <img src="{{obj.image.url}}" class="card-img-top" alt="Profile Image" width="1500" height="1000">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
